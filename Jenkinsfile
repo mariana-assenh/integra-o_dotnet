@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage('Build') {
+        stage('Build'){
             step{
                 script{
                     bat "dotnet restore api1/api1.csproj"

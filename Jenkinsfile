@@ -14,7 +14,7 @@ pipeline{
         stage('Deploy'){
             steps{
                 script{
-                    bat "dotnet publish App1/App1.csproj -c Release -o c:\plss\app1"
+                    bat "dotnet publish App1/App1.csproj -c Release -o c:\\plss\\app1"
                 }
             }
         }

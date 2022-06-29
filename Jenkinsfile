@@ -6,8 +6,8 @@ pipeline{
         stage('Build'){
             steps{
                 script{
-                    bat "dotnet restore api1/api1.csproj"
-                    bat "dotnet build api1/api1.csproj"        
+                    bat "dotnet restore App1/App1.csproj"
+                    bat "dotnet build App1/App1.csproj"        
                 }
             }
         }

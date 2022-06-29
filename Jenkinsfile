@@ -1,5 +1,7 @@
 pipeline{
-    agent any
+    agent {
+        label 'servidor_plss'
+    }
     stages{
         stage('Build'){
             steps{

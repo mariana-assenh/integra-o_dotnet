@@ -1,6 +1,7 @@
 pipeline{
-    agent {
-        label 'servidor_plss'
+    agent {label 'servidor_plss'}
+    triggers{
+        pollSCM '* * * * *'
     }
     stages{
         stage('Build'){

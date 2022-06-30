@@ -1,9 +1,7 @@
 pipeline{
     agent {label 'servidor_plss'}
     triggers{
-        GenericTrigger(
-            causeString: "Triggered from Webhook",)
-
+        pollSCM '* * * * *'
     }
     stages{
         stage('Build'){

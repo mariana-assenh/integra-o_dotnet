@@ -7,15 +7,15 @@ pipeline{
         stage('Build'){
             steps{
                 script{
-                    bat "dotnet restore App2/App2.csproj"
-                    bat "dotnet build App2/App2.csproj"        
+                    bat "dotnet restore App3/App3.csproj"
+                    bat "dotnet build App3/App3.csproj"        
                 }
             }
         }
         stage('Deploy'){
             steps{
                 script{
-                    bat "dotnet publish App2/App2.csproj -c Release -o c:\\plss\\app2"
+                    bat "dotnet publish App3/App3.csproj -c Release -o c:\\plss\\app3"
                 }
             }
         }

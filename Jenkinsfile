@@ -31,10 +31,12 @@ pipeline{
         stage('DEPLOY APP1'){
             steps{
                 script{
-                    sh "dotnet publish ${CSPROJAPP1} -c Release -o c:\\plss\\app1"
+                    sh "dotnet publish ${CSPROJAPP1} -c Release -o ${PUBLISHAPP1}"
                 }
+            }
+        }
                 
-                stage('BUILD APP2'){
+        stage('BUILD APP2'){
             steps{
                 script{
                     sh "dotnet restore ${CSPROJAPP2}"
@@ -45,10 +47,11 @@ pipeline{
         stage('DEPLOY APP2'){
             steps{
                 script{
-                    sh "dotnet publish ${CSPROJAPP2} -c Release -o c:\\plss\\app1"
+                    sh "dotnet publish ${CSPROJAPP2} -c Release -o ${PUBLISHAPP2}"
                 }
-                
-                stage('BUILD APP3'){
+            }
+        }
+        stage('BUILD APP3'){
             steps{
                 script{
                     sh "dotnet restore ${CSPROJAPP3}"
@@ -59,7 +62,7 @@ pipeline{
         stage('DEPLOY APP3'){
             steps{
                 script{
-                    sh "dotnet publish ${CSPROJAPP3} -c Release -o c:\\plss\\app1"
+                    sh "dotnet publish ${CSPROJAPP3} -c Release -o ${PUBLISHAPP3}"
                 }
             }
         }

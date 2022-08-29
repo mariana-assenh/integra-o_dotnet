@@ -1,5 +1,5 @@
 pipeline{
-    agent {label 'servidor_plss'}
+    agent {label 'master'}
     triggers{
         pollSCM '* * * * *'
     }
@@ -12,7 +12,7 @@ pipeline{
         //CAMINHO DA ENTREGA
         PUBLISHAPP1 = "/testemari/endentrega/app1"   
         PUBLISHAPP2 = "/testemari/endentrega/app2"
-        PUBLISHAPP3 = "/testemari/endentrega/app3
+        PUBLISHAPP3 = "/testemari/endentrega/app3"
         
     }
     stages('VERIFICANDO ALTERAÇÕES'){

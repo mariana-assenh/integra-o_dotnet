@@ -4,7 +4,7 @@ pipeline{
         pollSCM '* * * * *'
     }
     
-    enviroment{
+    environment{
         //CAMINHO DO CSPROJ
         CSPROJAPP1 = "App1/App1.csproj"
         CSPROJAPP2 = "App2/App2.csproj"

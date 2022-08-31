@@ -19,7 +19,7 @@ pipeline{
        // When{
        //     branch{''
        //     }
-        }
+        
         stage('BUILD APP1'){
             steps{
                 script{
@@ -67,4 +67,5 @@ pipeline{
             }
         }
     }
-
+  }
+}

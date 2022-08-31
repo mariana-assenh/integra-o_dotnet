@@ -4,7 +4,7 @@ pipeline{
         pollSCM '* * * * *'
     }
     
-    Enviroment{
+    enviroment{
         //CAMINHO DO CSPROJ
         CSPROJAPP1 = "App1/App1.csproj"
         CSPROJAPP2 = "App2/App2.csproj"
@@ -16,9 +16,9 @@ pipeline{
         
     }
     stages('VERIFICANDO ALTERAÇÕES'){
-        When{
-            branch{'main'
-            }
+       // When{
+       //     branch{''
+       //     }
         }
         stage('BUILD APP1'){
             steps{
